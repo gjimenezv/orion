@@ -1,0 +1,73 @@
+.season {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+
+  &.season--winter {
+    background: linear-gradient(
+      -45deg,
+      cyan,
+      lightblue,
+      white,
+      rgb(13, 100, 222)
+    );
+    background-size: 200% 200%;
+    animation: live-gradient 8s ease infinite;
+  }
+
+  &.season--summer {
+    background: linear-gradient(
+      -45deg,
+      aqua,
+      white,
+      #e6a56b,
+      rgb(239, 96, 80),
+      #efe81e,
+      yellow
+    );
+    background-size: 200% 200%;
+    animation: live-gradient 8s ease infinite;
+  }
+}
+
+.season__icon {
+  animation: spin 4s ease infinite;
+
+  &.season__icon--left {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
+  &.season__icon--right {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .season--winter & {
+    color: rgb(17, 137, 135);
+  }
+
+  .season--summer & {
+    color: rgb(203, 58, 42);
+  }
+}
+
+.season__message {
+  font-size: 2rem;
+
+  .season--winter & {
+    color: rgb(74, 57, 179);
+    text-shadow: 0 0.1em 0 rgb(255, 255, 255);
+  }
+
+  .season--summer & {
+    color: white;
+    text-shadow: 0 0.1em 0 rgb(252, 0, 0);
+  }
+}

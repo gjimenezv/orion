@@ -1,0 +1,23 @@
+$shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.error__icon {
+  color: red;
+  text-shadow: $shadow;
+}
+
+.error__message {
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: $shadow;
+}
