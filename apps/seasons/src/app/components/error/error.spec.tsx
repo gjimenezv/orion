@@ -16,7 +16,7 @@ describe('Error', () => {
   });
 
   it('should have a customized error message', () => {
-    const message = 'Something went wrong'
+    const message = 'Something went wrong';
     const { getByText } = render(<Error message={message} />);
 
     expect(getByText(message)).toBeTruthy();

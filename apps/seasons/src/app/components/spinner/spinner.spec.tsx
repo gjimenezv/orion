@@ -16,7 +16,7 @@ describe('Error', () => {
   });
 
   it('should have a customized error message', () => {
-    const message = 'Launching rockets ...'
+    const message = 'Launching rockets ...';
     const { getByText } = render(<Spinner message={message} />);
 
     expect(getByText(message)).toBeTruthy();
